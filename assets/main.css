@@ -1,0 +1,101 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 800px;
+  margin: 0px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.main-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
+.main-div-top {
+  width: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  color: white;
+  /* font-family: 'Gloria Hallelujah', cursive; */
+  font-family: 'Alegreya Sans SC', sans-serif;
+  margin: 5px 0px;
+  font-size: 40px;
+}
+
+i {
+  color: white;
+  font-family: sans-serif, 'FontAwesome';
+  font-size: 30px;
+  padding-left: 15px;
+}
+
+.main-div-bottom {
+  display: flex;
+  justify-content: center;
+}
+
+#entry-modal {
+  background-color: black;
+  height: 800px;
+  width: 1300px;
+  position: absolute;
+  opacity: 1;
+  -webkit-transition: opacity 1000ms linear;
+  transition: opacity 1000ms linear;
+  display: flex;
+  justify-content: center;
+  z-index: 3;
+}
+
+#entry-modal-first {
+  opacity: 1;
+  -webkit-transition: opacity 1000ms linear;
+  transition: opacity 1000ms linear;
+}
+
+#entry-modal > div > div {
+  padding: 20px;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  /* font-family: 'Gloria Hallelujah', cursive;  */
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+#game-bar {
+  height: 125px;
+  width: 100%;
+  background-color: rgb(24, 24, 24);
+}
+
+#game-background {
+  background-color: purple;
+  background-image: url("../assets/background_wbar.png");
+  position: relative;
+  height: 665px;
+  width: 1150px;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* #defense-game {
+  z-index: 2;
+} */
