@@ -26,12 +26,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 20px;
 }
 
 h1 {
   color: white;
-  /* font-family: 'Gloria Hallelujah', cursive; */
-  font-family: 'Alegreya Sans SC', sans-serif;
+  font-family: 'Righteous', cursive;
   margin: 5px 0px;
   font-size: 40px;
 }
@@ -69,8 +69,7 @@ i {
 
 #entry-modal > div > div {
   padding: 20px;
-  font-family: 'Alegreya Sans SC', sans-serif;
-  /* font-family: 'Gloria Hallelujah', cursive;  */
+  font-family: 'Righteous', cursive;
   color: white;
   font-size: 20px;
   text-align: center;
@@ -84,7 +83,7 @@ i {
 
 #game-background {
   background-color: purple;
-  background-image: url("../assets/background_wbar.png");
+  background-image: url("../assets/background_wbar1.png");
   position: relative;
   height: 665px;
   width: 1150px;
@@ -95,7 +94,3 @@ canvas {
   top: 0;
   left: 0;
 }
-
-/* #defense-game {
-  z-index: 2;
-} */

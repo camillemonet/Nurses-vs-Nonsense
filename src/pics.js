@@ -8,7 +8,7 @@ export default class Pics {
 
   karenImage() {
     this.karen = new Image();
-    this.karen.src = "./assets/karen_spritesheet3.png";
+    this.karen.src = "./assets/karen_spritesheet4.png";
     return this.karen;
   }
 
@@ -16,6 +16,12 @@ export default class Pics {
     this.bob = new Image();
     this.bob.src = "./assets/bob_spritesheet.png";
     return this.bob;
+  }
+
+  mikeImage() {
+    this.mike = new Image();
+    this.mike.src = "./assets/mike_spritesheet.png";
+    return this.mike;
   }
 
   sanitizerImage() {
@@ -32,7 +38,7 @@ export default class Pics {
 
   nurseImage() {
     this.nurse = new Image();
-    this.nurse.src = "./assets/nurse_spritesheet3.png";
+    this.nurse.src = "./assets/nurse_spritesheet6.png";
     return this.nurse;
   }
 
@@ -40,6 +46,24 @@ export default class Pics {
     this.nurse2 = new Image();
     this.nurse2.src = "./assets/nurse_sprite.png";
     return this.nurse2;
+  }
+
+  mask() {
+    this.mask = new Image();
+    this.mask.src = "./assets/mask.png";
+    return this.mask;
+  }
+
+  scientistImage() {
+    this.science = new Image();
+    this.science.src = "./assets/scientist_spritesheet2.png";
+    return this.science;
+  }
+
+  plus() {
+    this.plussign = new Image();
+    this.plussign.src = "./assets/plus.png";
+    return this.plussign;
   }
 
 }

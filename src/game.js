@@ -31,7 +31,7 @@ export default class StoreDefense {
     this.dimensions = { width: canvas.width, height: canvas.height };
     this.ctx = canvas.getContext("2d");
     this.ctx2 = canvas2.getContext("2d");
-    this.restart();
+    // this.restart();
   }
 
   restart() {
@@ -41,8 +41,7 @@ export default class StoreDefense {
 
   setModalDiv() {
     let that = this;
-    // this.restart();
-
+    
     that.entryModalFirst.style.opacity = '0';
     setTimeout(function () { 
       that.entryModalFirst.remove(); 
@@ -51,10 +50,12 @@ export default class StoreDefense {
         that.entryModal.remove();
       }, 1000);
     }, 1000);
-
+    
     this.audio.muted = false;
     this.audio.volume = 0.1;
     // this.audio.play();
+
+    this.restart();
   }
 
   renderSound() {
