@@ -342,7 +342,7 @@ export default class Board {
             this.nurseRepeat = 0;
           }
 
-          if (imageObj.item === "nurse" && imageObj.currentFrame === 1 && this.nurseRepeat < 20) {
+          if (imageObj.item === "nurse" && imageObj.currentFrame === 1 && this.nurseRepeat < 15) {
             imageObj.shift = 0;
             imageObj.currentFrame = 0;
             this.nurseRepeat += 1;
@@ -404,7 +404,7 @@ export default class Board {
             this.ctx.font = "20px Righteous";
             this.ctx.fillText("The shoppers made it into Cotsco.", 425, 175);
             this.ctx.fillText("The pandemic is renewed and you're stuck in your house for another six months.", 225, 205);
-            this.ctx.fillText("It's time to break out the sourdough starter once again.", 320, 235);
+            this.ctx.fillText("It's time to break out the sourdough starter once more.", 320, 235);
             this.ctx.fillText("Refresh to play again.", 485, 325)
             this.canvas.onmousemove = function () { };
             this.canvas.onclick = function () { };
