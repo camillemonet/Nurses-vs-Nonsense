@@ -303,7 +303,7 @@ export default class Board {
     let elapsed = now - this.then;
     let that = this;
 
-    if (7000 < (now - this.healthOld)) {
+    if (5000 < (now - this.healthOld)) {
       this.healthPts += 25;
       this.healthOld = Date.now();
       this.drawNavbar();
@@ -342,7 +342,7 @@ export default class Board {
             this.nurseRepeat = 0;
           }
 
-          if (imageObj.item === "nurse" && imageObj.currentFrame === 1 && this.nurseRepeat < 15) {
+          if (imageObj.item === "nurse" && imageObj.currentFrame === 1 && this.nurseRepeat < 20) {
             imageObj.shift = 0;
             imageObj.currentFrame = 0;
             this.nurseRepeat += 1;
@@ -507,7 +507,7 @@ export default class Board {
           if((obj1.xi < obj2.posX + obj2.scaleWidth - 65) && (obj2.posX < obj1.xi + obj1.frameWidth - 35) && 
             (obj1.yi + obj1.frameHeight / 2 < obj2.posY + obj2.scaleHeight) && (obj2.posY < obj1.yi + obj1.frameHeight / 2)) {
             
-              let destArr = allObjs.filter((obj) => ((obj.item === "karen" || obj.item === "bob") && (obj.xi < obj2.posX + obj2.scaleWidth + 150) &&
+              let destArr = allObjs.filter((obj) => ((obj.item === "karen" || obj.item === "bob" || obj.item === "mike") && (obj.xi < obj2.posX + obj2.scaleWidth + 150) &&
             (obj2.posX < obj.xi + obj.frameWidth - 35) && (obj.yi + obj.frameHeight/2 < obj2.posY + obj2.scaleHeight) && (obj2.posY < obj.yi + obj.frameHeight/2)))
             
             for(let k = 0; k < destArr.length; k++) {
@@ -524,7 +524,7 @@ export default class Board {
           if((obj2.xi < obj1.posX + obj1.scaleWidth - 65) && (obj1.posX < obj2.xi + obj2.frameWidth - 35) && 
             (obj2.yi + obj2.frameHeight / 2 < obj1.posY + obj1.scaleHeight) && (obj1.posY < obj2.yi + obj2.frameHeight / 2)) {
             
-            let destArr = allObjs.filter((obj) => ((obj.item === "karen" || obj.item === "bob") && (obj.xi < obj1.posX + obj1.scaleWidth + 150) &&
+            let destArr = allObjs.filter((obj) => ((obj.item === "karen" || obj.item === "bob" || obj.item === "mike") && (obj.xi < obj1.posX + obj1.scaleWidth + 150) &&
             (obj1.posX < obj.xi + obj.frameWidth - 35) && (obj.yi + obj.frameHeight/2 < obj1.posY + obj1.scaleHeight) && (obj1.posY < obj.yi + obj.frameHeight/2)))
             
             for(let k = 0; k < destArr.length; k++) {
