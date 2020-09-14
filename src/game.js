@@ -53,7 +53,7 @@ export default class StoreDefense {
     
     this.audio.muted = false;
     this.audio.volume = 0.1;
-    // this.audio.play();
+    this.audio.play();
 
     this.restart();
   }
@@ -76,7 +76,7 @@ export default class StoreDefense {
     } else {
       this.soundOn = true;
       this.renderSound();
-      // this.audio.muted = false;
+      this.audio.muted = false;
       this.audio.volume = 0.1;
       this.audio.play();
     }
