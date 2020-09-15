@@ -28,7 +28,6 @@ export default class Board {
     this.scientistImg = this.pics.scientistImage();
     this.plusImg = this.pics.plus();
 
-    this.nurseRepeat = 0;
     this.scientistRepeat = 0;
 
     this.gameState = "in progress";
@@ -228,7 +227,7 @@ export default class Board {
         if (this.selected === 0) {
           if (this.healthPts > 74) {
             this.animationToBeDrawn.push({ image: this.nurseImg, shift: 0, frameWidth: 69, frameHeight: 150, totalFrames: 7, currentFrame: 2, fps: 5, 
-              fpsInterval: 200, xi: r.x + 10, yi: r.y - 60, type: "animation", item: "nurse", active: true, damage: 0 })
+              fpsInterval: 200, xi: r.x + 10, yi: r.y - 60, type: "animation", item: "nurse", active: true, damage: 0, frameCt: 0 })
             this.healthPts -= 75;
           }
           this.ctx.clearRect(0, 0, 950, 130);
@@ -339,13 +338,13 @@ export default class Board {
               image: this.maskImg, shift: 0, frameWidth: this.maskImg.width, frameHeight: this.maskImg.height, speed: -15,
               totalFrames: 1, currentFrame: 1, type: "animation", item: "mask", xi: imageObj.xi + 75, yi: imageObj.yi + 50, active: true
             })
-            this.nurseRepeat = 0;
+            imageObj.frameCt = 0;
           }
 
-          if (imageObj.item === "nurse" && imageObj.currentFrame === 1 && this.nurseRepeat < 20) {
+          if (imageObj.item === "nurse" && imageObj.currentFrame === 1 && imageObj.frameCt < 20) {
             imageObj.shift = 0;
             imageObj.currentFrame = 0;
-            this.nurseRepeat += 1;
+            imageObj.frameCt += 1;
           }
 
           if (imageObj.item === "scientist" && imageObj.currentFrame === 2 && this.scientistRepeat < 20) {

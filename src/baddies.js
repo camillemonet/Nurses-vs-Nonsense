@@ -119,7 +119,7 @@ export default class Baddies {
     })
 
     outputArr.push({
-      image: this.bobImg, shift: 0, frameWidth: 73, frameHeight: 149, totalFrames: 7, currentFrame: 0,
+      image: this.bobImg, shift: 0, frameWidth: 85, frameHeight: 149, totalFrames: 7, currentFrame: 0,
       xi: 4850, yi: this.randomRow(), type: "animation", item: "bob", start: 0, active: true, maskCounter: 0, speed: 6
     })
 
@@ -129,7 +129,7 @@ export default class Baddies {
     })
 
     outputArr.push({
-      image: this.bobImg, shift: 0, frameWidth: 73, frameHeight: 149, totalFrames: 7, currentFrame: 0,
+      image: this.bobImg, shift: 0, frameWidth: 85, frameHeight: 149, totalFrames: 7, currentFrame: 0,
       xi: 4900, yi: this.randomRow(), type: "animation", item: "bob", start: 0, active: true, maskCounter: 0, speed: 6
     })
 
@@ -153,27 +153,27 @@ export default class Baddies {
     let karenpoint = 4450;
     
     outputArr.push({
-      image: this.bobImg, shift: 0, frameWidth: 73, frameHeight: 149, totalFrames: 7, currentFrame: 0,
+      image: this.bobImg, shift: 0, frameWidth: 85, frameHeight: 149, totalFrames: 7, currentFrame: 0,
       xi: bobPoint - 200, yi: this.rows[0], type: "animation", item: "bob", start: 0, active: true, maskCounter: 0, speed: 6
     })
 
     outputArr.push({
-      image: this.bobImg, shift: 0, frameWidth: 73, frameHeight: 149, totalFrames: 7, currentFrame: 0,
+      image: this.bobImg, shift: 0, frameWidth: 85, frameHeight: 149, totalFrames: 7, currentFrame: 0,
       xi: bobPoint - 100, yi: this.rows[1], type: "animation", item: "bob", start: 0, active: true, maskCounter: 0, speed: 6
     })
 
     outputArr.push({
-      image: this.bobImg, shift: 0, frameWidth: 73, frameHeight: 149, totalFrames: 7, currentFrame: 0,
+      image: this.bobImg, shift: 0, frameWidth: 85, frameHeight: 149, totalFrames: 7, currentFrame: 0,
       xi: bobPoint, yi: this.rows[2], type: "animation", item: "bob", start: 0, active: true, maskCounter: 0, speed: 6
     })
 
     outputArr.push({
-      image: this.bobImg, shift: 0, frameWidth: 73, frameHeight: 149, totalFrames: 7, currentFrame: 0,
+      image: this.bobImg, shift: 0, frameWidth: 85, frameHeight: 149, totalFrames: 7, currentFrame: 0,
       xi: bobPoint - 100, yi: this.rows[3], type: "animation", item: "bob", start: 0, active: true, maskCounter: 0, speed: 6
     })
 
     outputArr.push({
-      image: this.bobImg, shift: 0, frameWidth: 73, frameHeight: 149, totalFrames: 7, currentFrame: 0,
+      image: this.bobImg, shift: 0, frameWidth: 85, frameHeight: 149, totalFrames: 7, currentFrame: 0,
       xi: bobPoint - 200, yi: this.rows[4], type: "animation", item: "bob", start: 0, active: true, maskCounter: 0, speed: 6
     })
 
@@ -215,16 +215,3 @@ export default class Baddies {
   }
 
 }
-
-// {image: this.karenImg, shift: 0, frameWidth: 73, frameHeight: 149, totalFrames: 7, currentFrame: 0,
-//         fps: 5, fpsInterval: 200, xi: 1150, yi: 80, type: "animation", item: "karen", start: 0, active: true, maskCounter: 0},
-//       {image: this.karenImg, shift: 0, frameWidth: 73, frameHeight: 149, totalFrames: 7, currentFrame: 0,
-//         fps: 5, fpsInterval: 200, xi: 1050, yi: 185, type: "animation", item: "karen", start: 0, active: true, maskCounter: 0},
-//       {image: this.karenImg, shift: 0, frameWidth: 73, frameHeight: 149, totalFrames: 7, currentFrame: 0,
-//         fps: 5, fpsInterval: 200, xi: 950, yi: 290, type: "animation", item: "karen", start: 0, active: true, maskCounter: 0},
-//       {image: this.karenImg, shift: 0, frameWidth: 73, frameHeight: 149, totalFrames: 7, currentFrame: 0,
-//         fps: 5, fpsInterval: 200, xi: 650, yi: 395, type: "animation", item: "karen", start: 0, active: true, maskCounter: 0},
-//       {image: this.karenImg, shift: 0, frameWidth: 73, frameHeight: 149, totalFrames: 7, currentFrame: 0,
-//         fps: 5, fpsInterval: 200, xi: 1050, yi: 395, type: "animation", item: "karen", start: 0, active: true, maskCounter: 0},
-//       {image: this.bobImg, shift: 0, frameWidth: 86, frameHeight: 176, totalFrames: 7, currentFrame: 0,
-//         fps: 5, fpsInterval: 200, xi: 1150, yi: 500, type: "animation", item: "bob", start: 0, active: true, maskCounter: 0},
