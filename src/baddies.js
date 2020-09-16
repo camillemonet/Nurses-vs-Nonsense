@@ -413,7 +413,7 @@ export default class Baddies {
   levelInfinite() {
     let outArray = [];
 
-    for (let i = 15000; i < 100000; i += 100) {
+    for (let i = 15000; i < 100000; i += 50) {
 
       outputArr.push({
         image: this.bobImg, shift: 0, frameWidth: 85, frameHeight: 149, totalFrames: 7, currentFrame: 0,
@@ -438,6 +438,18 @@ export default class Baddies {
       outputArr.push({
         image: this.bobImg, shift: 0, frameWidth: 85, frameHeight: 149, totalFrames: 7, currentFrame: 0,
         xi: i, yi: this.randomRow(), type: "animation", item: "bob", start: 0, active: true, maskCounter: 0, speed: 6
+      })
+
+
+      outputArr.push({
+        image: this.karenImg, shift: 0, frameWidth: 73, frameHeight: 149, totalFrames: 7, currentFrame: 0,
+        xi: i - 300, yi: this.randomRow(), type: "animation", item: "karen", start: 0, active: true, maskCounter: 0, speed: 4
+      })
+
+
+      outputArr.push({
+        image: this.karenImg, shift: 0, frameWidth: 73, frameHeight: 149, totalFrames: 7, currentFrame: 0,
+        xi: i - 300, yi: this.randomRow(), type: "animation", item: "karen", start: 0, active: true, maskCounter: 0, speed: 4
       })
 
     }

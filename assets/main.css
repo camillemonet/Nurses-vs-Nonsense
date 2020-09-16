@@ -116,3 +116,23 @@ canvas {
 span {
   color: #ea2406;
 }
+
+#footer {
+  color: white;
+  font-size: 20px;
+  display: flex;
+  background-color: black;
+  justify-content: space-around;
+  padding: 10px 0px;
+  width: 1150px;
+  align-items: center;
+  position: fixed;
+  bottom: 0px;
+  font-family: 'Righteous', cursive;
+}
+
+#footer a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Righteous', cursive;
+}
