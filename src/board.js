@@ -302,7 +302,7 @@ export default class Board {
     let elapsed = now - this.then;
     let that = this;
 
-    if (5000 < (now - this.healthOld)) {
+    if (7500 < (now - this.healthOld)) {
       this.healthPts += 25;
       this.healthOld = Date.now();
       this.drawNavbar();
