@@ -225,34 +225,34 @@ export default class Board {
 
       if (this.ctxA.isPointInPath(x, y)) {
         if (this.selected === 0) {
-          if (this.healthPts > 74) {
+          if (this.healthPts > 74 && this.animationToBeDrawn.filter(ele => {return (ele.square === undefined ? false : (ele.square[0] === r.x && ele.square[1] === r.y)) }).length === 0 && this.imageObjToBeDrawn.filter(ele => { return (ele.square[0] === r.x && ele.square[1] === r.y) }).length === 0) {
             this.animationToBeDrawn.push({ image: this.nurseImg, shift: 0, frameWidth: 69, frameHeight: 150, totalFrames: 7, currentFrame: 2, fps: 5, 
-              fpsInterval: 200, xi: r.x + 10, yi: r.y - 60, type: "animation", item: "nurse", active: true, damage: 0, frameCt: 0 })
+              fpsInterval: 200, xi: r.x + 10, yi: r.y - 60, type: "animation", item: "nurse", active: true, damage: 0, frameCt: 0, square: [r.x, r.y] })
             this.healthPts -= 75;
           }
           this.ctx.clearRect(0, 0, 950, 130);
           this.drawNavbar();
-        } else if (this.selected === 1) {
+        } else if (this.selected === 1 && this.animationToBeDrawn.filter(ele => {return (ele.square === undefined ? false : (ele.square[0] === r.x && ele.square[1] === r.y)) }).length === 0 && this.imageObjToBeDrawn.filter(ele => { return (ele.square[0] === r.x && ele.square[1] === r.y) }).length === 0) {
           if (this.healthPts > 74) {
             this.imageObjToBeDrawn.push({ image: this.newspaperImg, frameWidth: 734, frameHeight: 656, posX: r.x - 5, posY: r.y-7, scaleWidth: 120, 
-              scaleHeight: 120 * 656/734, active: true, item: "newspaper", damage: 0 })
+              scaleHeight: 120 * 656/734, active: true, item: "newspaper", damage: 0, square: [r.x, r.y] })
             this.healthPts -= 75;
           }
           this.ctx.clearRect(0, 0, 950, 130);
           this.drawNavbar();
-        } else if (this.selected === 2) {
+        } else if (this.selected === 2 && this.animationToBeDrawn.filter(ele => {return (ele.square === undefined ? false : (ele.square[0] === r.x && ele.square[1] === r.y)) }).length === 0 && this.imageObjToBeDrawn.filter(ele => { return (ele.square[0] === r.x && ele.square[1] === r.y) }).length === 0) {
           if (this.healthPts > 99) {
             this.animationToBeDrawn.push({ image: this.scientistImg, shift: 0, frameWidth: 51, frameHeight: 150, totalFrames: 2, currentFrame: 0, fps: 5,
-              fpsInterval: 200, xi: r.x + 20, yi: r.y - 55, type: "animation", item: "scientist", active: true, healthTime: Date.now(), firstPass: true })
+              fpsInterval: 200, xi: r.x + 20, yi: r.y - 55, type: "animation", item: "scientist", active: true, healthTime: Date.now(), firstPass: true, square: [r.x, r.y] })
             this.healthPts -= 100;
           }
           this.ctx.clearRect(0, 0, 950, 130);
           this.drawNavbar();
-        } else if (this.selected === 3) {
+        } else if (this.selected === 3 && this.animationToBeDrawn.filter(ele => {return (ele.square === undefined ? false : (ele.square[0] === r.x && ele.square[1] === r.y)) }).length === 0 && this.imageObjToBeDrawn.filter(ele => {return (ele.square[0] === r.x && ele.square[1] === r.y)}).length === 0) {
           if (this.healthPts > 49) {
             this.imageObjToBeDrawn.push({ image: this.sanitizerImg, frameWidth: 400, frameHeight: 421, posX: r.x - 10, posY: r.y - 25, scaleWidth: 120,
-               scaleHeight: 120 * 421/400, active: true, item: "sanitizer" })
-            this.healthPts -= 50;
+              scaleHeight: 120 * 421/400, active: true, item: "sanitizer", square: [r.x, r.y] })
+              this.healthPts -= 50;
           }
           this.ctx.clearRect(0, 0, 950, 130);
           this.drawNavbar();
