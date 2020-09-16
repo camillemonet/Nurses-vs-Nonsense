@@ -14,7 +14,7 @@ export default class Baddies {
   }
 
   getBaddies() {
-    return (this.levelOne().concat(this.levelTwo()).concat(this.levelThree()).concat(this.levelFour()).concat(this.levelFive()))
+    return (this.levelOne().concat(this.levelTwo()).concat(this.levelThree()).concat(this.levelFour()).concat(this.levelFive()).concat(this.levelSix()).concat(this.levelSeven()))
   }
 
   levelOne() {
@@ -221,8 +221,6 @@ export default class Baddies {
   }
 
   levelSix() {
-    outputArr = [];
-
     let outputArr = [];
 
     let bobPoint = 5050;
@@ -278,7 +276,6 @@ export default class Baddies {
       xi: karenPoint + 100, yi: this.rows[3], type: "animation", item: "karen", start: 0, active: true, maskCounter: 0, speed: 4
     })
 
-
     outputArr.push({
       image: this.karenImg, shift: 0, frameWidth: 73, frameHeight: 149, totalFrames: 7, currentFrame: 0,
       xi: karenPoint + 200, yi: this.rows[4], type: "animation", item: "karen", start: 0, active: true, maskCounter: 0, speed: 4
@@ -312,6 +309,101 @@ export default class Baddies {
     outputArr.push({
       image: this.mikeImg, shift: 0, frameWidth: 85, frameHeight: 150, totalFrames: 7, currentFrame: 0,
       xi: 12000, yi: this.randomRow(), type: "animation", item: "mike", start: 0, active: true, maskCounter: 0, speed: 12
+    })
+
+    return (outputArr)
+
+  }
+
+  levelSeven() {
+    let outputArr = [];
+
+    let bobPoint = 5950;
+    let karenPoint = 5350;
+    let mikePoint = 7000;
+
+    outputArr.push({
+      image: this.bobImg, shift: 0, frameWidth: 85, frameHeight: 149, totalFrames: 7, currentFrame: 0,
+      xi: bobPoint + 200, yi: this.rows[0], type: "animation", item: "bob", start: 0, active: true, maskCounter: 0, speed: 6
+    })
+
+    outputArr.push({
+      image: this.bobImg, shift: 0, frameWidth: 85, frameHeight: 149, totalFrames: 7, currentFrame: 0,
+      xi: bobPoint + 100, yi: this.rows[1], type: "animation", item: "bob", start: 0, active: true, maskCounter: 0, speed: 6
+    })
+
+    outputArr.push({
+      image: this.bobImg, shift: 0, frameWidth: 85, frameHeight: 149, totalFrames: 7, currentFrame: 0,
+      xi: bobPoint, yi: this.rows[2], type: "animation", item: "bob", start: 0, active: true, maskCounter: 0, speed: 6
+    })
+
+    outputArr.push({
+      image: this.bobImg, shift: 0, frameWidth: 85, frameHeight: 149, totalFrames: 7, currentFrame: 0,
+      xi: bobPoint + 100, yi: this.rows[3], type: "animation", item: "bob", start: 0, active: true, maskCounter: 0, speed: 6
+    })
+
+    outputArr.push({
+      image: this.bobImg, shift: 0, frameWidth: 85, frameHeight: 149, totalFrames: 7, currentFrame: 0,
+      xi: bobPoint + 200, yi: this.rows[4], type: "animation", item: "bob", start: 0, active: true, maskCounter: 0, speed: 6
+    })
+
+
+    outputArr.push({
+      image: this.karenImg, shift: 0, frameWidth: 73, frameHeight: 149, totalFrames: 7, currentFrame: 0,
+      xi: karenPoint + 200, yi: this.rows[0], type: "animation", item: "karen", start: 0, active: true, maskCounter: 0, speed: 4
+    })
+
+
+    outputArr.push({
+      image: this.karenImg, shift: 0, frameWidth: 73, frameHeight: 149, totalFrames: 7, currentFrame: 0,
+      xi: karenPoint + 100, yi: this.rows[1], type: "animation", item: "karen", start: 0, active: true, maskCounter: 0, speed: 4
+    })
+
+
+    outputArr.push({
+      image: this.karenImg, shift: 0, frameWidth: 73, frameHeight: 149, totalFrames: 7, currentFrame: 0,
+      xi: karenPoint, yi: this.rows[2], type: "animation", item: "karen", start: 0, active: true, maskCounter: 0, speed: 4
+    })
+
+
+    outputArr.push({
+      image: this.karenImg, shift: 0, frameWidth: 73, frameHeight: 149, totalFrames: 7, currentFrame: 0,
+      xi: karenPoint + 100, yi: this.rows[3], type: "animation", item: "karen", start: 0, active: true, maskCounter: 0, speed: 4
+    })
+
+    outputArr.push({
+      image: this.karenImg, shift: 0, frameWidth: 73, frameHeight: 149, totalFrames: 7, currentFrame: 0,
+      xi: karenPoint + 200, yi: this.rows[4], type: "animation", item: "karen", start: 0, active: true, maskCounter: 0, speed: 4
+    })
+
+    outputArr.push({
+      image: this.mikeImg, shift: 0, frameWidth: 85, frameHeight: 150, totalFrames: 7, currentFrame: 0,
+      xi: 12500, yi: this.randomRow(), type: "animation", item: "mike", start: 0, active: true, maskCounter: 0, speed: 12
+    })
+
+    outputArr.push({
+      image: this.mikeImg, shift: 0, frameWidth: 85, frameHeight: 150, totalFrames: 7, currentFrame: 0,
+      xi: 12500, yi: this.randomRow(), type: "animation", item: "mike", start: 0, active: true, maskCounter: 0, speed: 12
+    })
+
+    outputArr.push({
+      image: this.mikeImg, shift: 0, frameWidth: 85, frameHeight: 150, totalFrames: 7, currentFrame: 0,
+      xi: 12500, yi: this.randomRow(), type: "animation", item: "mike", start: 0, active: true, maskCounter: 0, speed: 12
+    })
+
+    outputArr.push({
+      image: this.mikeImg, shift: 0, frameWidth: 85, frameHeight: 150, totalFrames: 7, currentFrame: 0,
+      xi: 12500, yi: this.randomRow(), type: "animation", item: "mike", start: 0, active: true, maskCounter: 0, speed: 12
+    })
+
+    outputArr.push({
+      image: this.mikeImg, shift: 0, frameWidth: 85, frameHeight: 150, totalFrames: 7, currentFrame: 0,
+      xi: 12500, yi: this.randomRow(), type: "animation", item: "mike", start: 0, active: true, maskCounter: 0, speed: 12
+    })
+
+    outputArr.push({
+      image: this.mikeImg, shift: 0, frameWidth: 85, frameHeight: 150, totalFrames: 7, currentFrame: 0,
+      xi: 12500, yi: this.randomRow(), type: "animation", item: "mike", start: 0, active: true, maskCounter: 0, speed: 12
     })
 
     return (outputArr)
