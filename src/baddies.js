@@ -413,7 +413,7 @@ export default class Baddies {
   levelInfinite() {
     let outArray = [];
 
-    for (let i = 15000; i < 100000; i += 500) {
+    for (let i = 15000; i < 100000; i += 100) {
 
       outputArr.push({
         image: this.bobImg, shift: 0, frameWidth: 85, frameHeight: 149, totalFrames: 7, currentFrame: 0,
