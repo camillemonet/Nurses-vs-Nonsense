@@ -283,32 +283,32 @@ export default class Baddies {
 
     outputArr.push({
       image: this.mikeImg, shift: 0, frameWidth: 85, frameHeight: 150, totalFrames: 7, currentFrame: 0,
-      xi: 12000, yi: this.randomRow(), type: "animation", item: "mike", start: 0, active: true, maskCounter: 0, speed: 12
+      xi: 13000, yi: this.randomRow(), type: "animation", item: "mike", start: 0, active: true, maskCounter: 0, speed: 12
     })
 
     outputArr.push({
       image: this.mikeImg, shift: 0, frameWidth: 85, frameHeight: 150, totalFrames: 7, currentFrame: 0,
-      xi: 12000, yi: this.randomRow(), type: "animation", item: "mike", start: 0, active: true, maskCounter: 0, speed: 12
+      xi: 13000, yi: this.randomRow(), type: "animation", item: "mike", start: 0, active: true, maskCounter: 0, speed: 12
     })
 
     outputArr.push({
       image: this.mikeImg, shift: 0, frameWidth: 85, frameHeight: 150, totalFrames: 7, currentFrame: 0,
-      xi: 12000, yi: this.randomRow(), type: "animation", item: "mike", start: 0, active: true, maskCounter: 0, speed: 12
+      xi: 13000, yi: this.randomRow(), type: "animation", item: "mike", start: 0, active: true, maskCounter: 0, speed: 12
     })
 
     outputArr.push({
       image: this.mikeImg, shift: 0, frameWidth: 85, frameHeight: 150, totalFrames: 7, currentFrame: 0,
-      xi: 12000, yi: this.randomRow(), type: "animation", item: "mike", start: 0, active: true, maskCounter: 0, speed: 12
+      xi: 13000, yi: this.randomRow(), type: "animation", item: "mike", start: 0, active: true, maskCounter: 0, speed: 12
     })
 
     outputArr.push({
       image: this.mikeImg, shift: 0, frameWidth: 85, frameHeight: 150, totalFrames: 7, currentFrame: 0,
-      xi: 12000, yi: this.randomRow(), type: "animation", item: "mike", start: 0, active: true, maskCounter: 0, speed: 12
+      xi: 13000, yi: this.randomRow(), type: "animation", item: "mike", start: 0, active: true, maskCounter: 0, speed: 12
     })
 
     outputArr.push({
       image: this.mikeImg, shift: 0, frameWidth: 85, frameHeight: 150, totalFrames: 7, currentFrame: 0,
-      xi: 12000, yi: this.randomRow(), type: "animation", item: "mike", start: 0, active: true, maskCounter: 0, speed: 12
+      xi: 13000, yi: this.randomRow(), type: "animation", item: "mike", start: 0, active: true, maskCounter: 0, speed: 12
     })
 
     return (outputArr)
@@ -378,36 +378,71 @@ export default class Baddies {
 
     outputArr.push({
       image: this.mikeImg, shift: 0, frameWidth: 85, frameHeight: 150, totalFrames: 7, currentFrame: 0,
-      xi: 12500, yi: this.randomRow(), type: "animation", item: "mike", start: 0, active: true, maskCounter: 0, speed: 12
+      xi: 14000, yi: this.randomRow(), type: "animation", item: "mike", start: 0, active: true, maskCounter: 0, speed: 12
     })
 
     outputArr.push({
       image: this.mikeImg, shift: 0, frameWidth: 85, frameHeight: 150, totalFrames: 7, currentFrame: 0,
-      xi: 12500, yi: this.randomRow(), type: "animation", item: "mike", start: 0, active: true, maskCounter: 0, speed: 12
+      xi: 14000, yi: this.randomRow(), type: "animation", item: "mike", start: 0, active: true, maskCounter: 0, speed: 12
     })
 
     outputArr.push({
       image: this.mikeImg, shift: 0, frameWidth: 85, frameHeight: 150, totalFrames: 7, currentFrame: 0,
-      xi: 12500, yi: this.randomRow(), type: "animation", item: "mike", start: 0, active: true, maskCounter: 0, speed: 12
+      xi: 14000, yi: this.randomRow(), type: "animation", item: "mike", start: 0, active: true, maskCounter: 0, speed: 12
     })
 
     outputArr.push({
       image: this.mikeImg, shift: 0, frameWidth: 85, frameHeight: 150, totalFrames: 7, currentFrame: 0,
-      xi: 12500, yi: this.randomRow(), type: "animation", item: "mike", start: 0, active: true, maskCounter: 0, speed: 12
+      xi: 14000, yi: this.randomRow(), type: "animation", item: "mike", start: 0, active: true, maskCounter: 0, speed: 12
     })
 
     outputArr.push({
       image: this.mikeImg, shift: 0, frameWidth: 85, frameHeight: 150, totalFrames: 7, currentFrame: 0,
-      xi: 12500, yi: this.randomRow(), type: "animation", item: "mike", start: 0, active: true, maskCounter: 0, speed: 12
+      xi: 14000, yi: this.randomRow(), type: "animation", item: "mike", start: 0, active: true, maskCounter: 0, speed: 12
     })
 
     outputArr.push({
       image: this.mikeImg, shift: 0, frameWidth: 85, frameHeight: 150, totalFrames: 7, currentFrame: 0,
-      xi: 12500, yi: this.randomRow(), type: "animation", item: "mike", start: 0, active: true, maskCounter: 0, speed: 12
+      xi: 14000, yi: this.randomRow(), type: "animation", item: "mike", start: 0, active: true, maskCounter: 0, speed: 12
     })
 
     return (outputArr)
 
+  }
+
+  levelInfinite() {
+    let outArray = [];
+
+    for (let i = 15000; i < 100000; i += 500) {
+
+      outputArr.push({
+        image: this.bobImg, shift: 0, frameWidth: 85, frameHeight: 149, totalFrames: 7, currentFrame: 0,
+        xi: i, yi: this.randomRow(), type: "animation", item: "bob", start: 0, active: true, maskCounter: 0, speed: 6
+      })
+
+      outputArr.push({
+        image: this.bobImg, shift: 0, frameWidth: 85, frameHeight: 149, totalFrames: 7, currentFrame: 0,
+        xi: i, yi: this.randomRow(), type: "animation", item: "bob", start: 0, active: true, maskCounter: 0, speed: 6
+      })
+
+      outputArr.push({
+        image: this.bobImg, shift: 0, frameWidth: 85, frameHeight: 149, totalFrames: 7, currentFrame: 0,
+        xi: i, yi: this.randomRow(), type: "animation", item: "bob", start: 0, active: true, maskCounter: 0, speed: 6
+      })
+
+      outputArr.push({
+        image: this.bobImg, shift: 0, frameWidth: 85, frameHeight: 149, totalFrames: 7, currentFrame: 0,
+        xi: i, yi: this.randomRow(), type: "animation", item: "bob", start: 0, active: true, maskCounter: 0, speed: 6
+      })
+
+      outputArr.push({
+        image: this.bobImg, shift: 0, frameWidth: 85, frameHeight: 149, totalFrames: 7, currentFrame: 0,
+        xi: i, yi: this.randomRow(), type: "animation", item: "bob", start: 0, active: true, maskCounter: 0, speed: 6
+      })
+
+    }
+
+    return outArray;
   }
 
   randomRow() {
