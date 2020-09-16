@@ -97,6 +97,16 @@ export default class Baddies {
       xi: 6550, yi: this.randomRow(), type: "animation", item: "mike", start: 0, active: true, maskCounter: 0, speed: 12
     })
 
+    outputArr.push({
+      image: this.bobImg, shift: 0, frameWidth: 86, frameHeight: 149, totalFrames: 7, currentFrame: 0,
+      xi: 3500, yi: this.randomRow(), type: "animation", item: "bob", start: 0, active: true, maskCounter: 0, speed: 6
+    })
+
+    outputArr.push({
+      image: this.karenImg, shift: 0, frameWidth: 73, frameHeight: 149, totalFrames: 7, currentFrame: 0,
+      xi: 3000, yi: this.randomRow(), type: "animation", item: "karen", start: 0, active: true, maskCounter: 0, speed: 4
+    })
+
     return (outputArr)
   }
 
