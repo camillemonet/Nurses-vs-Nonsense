@@ -243,7 +243,7 @@ export default class Board {
         } else if (this.selected === 2 && this.animationToBeDrawn.filter(ele => {return (ele.square === undefined ? false : (ele.square[0] === r.x && ele.square[1] === r.y)) }).length === 0 && this.imageObjToBeDrawn.filter(ele => { return (ele.square[0] === r.x && ele.square[1] === r.y) }).length === 0) {
           if (this.healthPts > 99) {
             this.animationToBeDrawn.push({ image: this.scientistImg, shift: 0, frameWidth: 51, frameHeight: 150, totalFrames: 2, currentFrame: 0, fps: 5,
-              fpsInterval: 200, xi: r.x + 20, yi: r.y - 55, type: "animation", item: "scientist", active: true, healthTime: Date.now(), firstPass: true, square: [r.x, r.y] })
+              fpsInterval: 200, xi: r.x + 20, yi: r.y - 55, type: "animation", item: "scientist", active: true, healthTime: Date.now(), firstPass: true, square: [r.x, r.y], damage: 0 })
             this.healthPts -= 100;
           }
           this.ctx.clearRect(0, 0, 950, 130);
@@ -426,12 +426,14 @@ export default class Board {
         if(obj1.item === "mask" && obj2.item === "karen") {
           if(obj1.xi > (obj2.xi - obj2.frameWidth/2 + 10) && obj1.xi < (obj2.xi + obj2.frameWidth/2 - 10) 
           && obj1.yi < (obj2.yi + obj2.frameHeight*3/4) && obj1.yi > obj2.yi ) {
-            obj1.active = false;
             obj1.item = "null";
+            obj1.active = false;
+            obj1.square = [0, 0];
             obj2.maskCounter += 1;
             if (obj2.maskCounter === 6) {
               obj2.item = "null";
               obj2.active = false;
+              obj2.square = [0, 0];
             }
           }
         }
@@ -439,12 +441,14 @@ export default class Board {
         if(obj1.item === "mask" && (obj2.item === "bob" || obj2.item === "mike")) {
           if(obj1.xi > (obj2.xi - obj2.frameWidth/2 + 10) && obj1.xi < (obj2.xi + obj2.frameWidth/2 - 10) 
           && obj1.yi < (obj2.yi + obj2.frameHeight*3/4) && obj1.yi > obj2.yi ) {
-            obj1.active = false;
             obj1.item = "null";
+            obj1.active = false;
+            obj1.square = [0, 0];
             obj2.maskCounter += 1;
             if (obj2.maskCounter === 3) {
               obj2.item = "null";
               obj2.active = false;
+              obj2.square = [0, 0];
             }
           }
         }
@@ -454,10 +458,12 @@ export default class Board {
           && obj2.yi < (obj1.yi + obj1.frameHeight*3/4) && obj2.yi > obj1.yi ) {
             obj2.active = false;
             obj2.item = "null";
+            obj2.square = [0, 0];
             obj1.maskCounter += 1;
             if (obj1.maskCounter === 6) {
               obj1.item = "null";
               obj1.active = false;
+              obj1.square = [0, 0];
             }
           }
         }
@@ -467,37 +473,39 @@ export default class Board {
           && obj2.yi < (obj1.yi + obj1.frameHeight*3/4) && obj2.yi > obj1.yi ) {
             obj2.active = false;
             obj2.item = "null";
+            obj2.square = [0, 0];
             obj1.maskCounter += 1;
             if (obj1.maskCounter === 3) {
               obj1.item = "null";
               obj1.active = false;
+              obj1.square = [0, 0];
             }
           }
         }
 
 
-        if (obj1.item === "nurse" && (obj2.item === "karen" || obj2.item === "bob" || obj2.item === "mike")) {
+        if ((obj1.item === "nurse" || obj1.item === "scientist") && (obj2.item === "karen" || obj2.item === "bob" || obj2.item === "mike")) {
           if (obj1.xi + obj1.frameWidth > obj2.xi && obj1.xi < obj2.xi + obj2.frameWidth
             && obj1.yi > obj2.yi - 20 && obj1.yi < obj2.yi + 20) {
-              console.log("HI")
             obj1.damage += 1;
             obj2.xi += 6;
             if (obj1.damage === 20) {
               obj1.active = false;
               obj1.item = "null";
+              obj1.square = [0, 0];
             }
           }
         }
 
-        if (obj2.item === "nurse" && (obj1.item === "karen" || obj1.item === "bob" || obj2.item === "mike")) {
+        if ((obj2.item === "nurse" || obj2.item === "scientist") && (obj1.item === "karen" || obj1.item === "bob" || obj2.item === "mike")) {
           if (obj2.xi + obj2.frameWidth > obj1.xi && obj2.xi < obj1.xi + obj1.frameWidth
             && obj2.yi > obj1.yi - 20 && obj2.yi < obj1.yi + 20) {
-              console.log("hey")
             obj2.damage += 1;
             obj1.xi += 6;
             if (obj2.damage === 20) {
               obj2.active = false;
               obj2.item = "null";
+              obj2.square = [0, 0];
             }
           }
         }
@@ -512,10 +520,12 @@ export default class Board {
             for(let k = 0; k < destArr.length; k++) {
               destArr[k].item = "null";
               destArr[k].active = false;
+              destArr[k].square = [0, 0];
             }
 
             obj2.item = "null";
             obj2.active = false;
+            obj2.square = [0, 0];
           }
         }
         
@@ -529,10 +539,12 @@ export default class Board {
             for(let k = 0; k < destArr.length; k++) {
               destArr[k].item = "null";
               destArr[k].active = false;
+              destArr[k].square = [0, 0];
             }
 
             obj1.item = "null";
             obj1.active = false;
+            obj1.square = [0, 0];
           }
         }
 
@@ -544,6 +556,7 @@ export default class Board {
               if (obj2.damage > 100) {
                 obj2.item = "null";
                 obj2.active = false;
+                obj2.square = [0, 0];
               }
           }
         }
@@ -556,6 +569,7 @@ export default class Board {
             if (obj1.damage > 100) {
               obj1.item = "null";
               obj1.active = false;
+              obj1.square = [0, 0];
             }
           }
         }
