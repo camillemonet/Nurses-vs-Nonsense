@@ -1,4 +1,4 @@
-![Nurses vs Nonsense](https://github.com/camillemonet/images/blob/master/js_title.png)
+<div align="center>![Nurses vs Nonsense](https://github.com/camillemonet/images/blob/master/js_title.png)</div>
 
 Nurses vs Nonsense is a game which encourages players to stop individuals from shopping in stores without masks.
 By placing strategic obstacles such as: 
