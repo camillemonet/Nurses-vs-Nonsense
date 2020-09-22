@@ -311,7 +311,7 @@ export default class Board {
     let elapsed = now - this.then;
     let that = this;
 
-    if (1000 < (now - this.drawNavbarTime)) {
+    if (1000 < (now - this.drawNavbarTime) && this.gameState !== "lost") {
       // this.onUpdateHealth();
       // this.addStopBoxes();
       this.drawNavbar();
