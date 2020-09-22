@@ -14,3 +14,9 @@ By placing strategic obstacles such as:
  https://camillemonet.github.io/Nurses-vs-Nonsense/
  
  ### Challenges
+ 
+ #### 1. Animation Loop 
+ 
+ #### 2. Collision Detection
+ 
+ ### Future Features
