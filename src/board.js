@@ -27,8 +27,10 @@ export default class Board {
     this.maskImg = this.pics.mask();
     this.scientistImg = this.pics.scientistImage();
     this.plusImg = this.pics.plus();
-
-    this.scientistRepeat = 0;
+    this.navNurseImg = this.pics.navbarNurse();
+    this.navScientistImg = this.pics.navbarScientist();
+    this.navSanitizerImg = this.pics.navbarSanitizer();
+    this.navNewspaperImg = this.pics.navbarNewspaper();
 
     this.gameState = "in progress";
 
@@ -130,29 +132,42 @@ export default class Board {
 
     let that = this;
 
-    let nurseImg = new Image();
-    nurseImg.addEventListener("load", function () {
-      that.ctx.drawImage(nurseImg, 40, 13, 40, 40 * nurseImg.height / nurseImg.width);
-    })
-    nurseImg.src = "./assets/nurse_sprite.png";
+    // let nurseImg = new Image();
+    // nurseImg.addEventListener("load", function () {
+    //   that.ctx.drawImage(nurseImg, 40, 13, 40, 40 * nurseImg.height / nurseImg.width);
+    // })
+    // nurseImg.src = "./assets/nurse_sprite.png";
     
-    let scientistImg = new Image();
-    scientistImg.addEventListener("load", function () {
-      that.ctx.drawImage(scientistImg, 265, 13, 32, 32 * scientistImg.height / scientistImg.width);
-    })
-    scientistImg.src = "./assets/scientist_sprite.png";
+    // let scientistImg = new Image();
+    // scientistImg.addEventListener("load", function () {
+    //   that.ctx.drawImage(scientistImg, 265, 13, 32, 32 * scientistImg.height / scientistImg.width);
+    // })
+    // scientistImg.src = "./assets/scientist_sprite.png";
     
-    let newsImg = new Image();
-    newsImg.addEventListener("load", function () {
-      that.ctx.drawImage(newsImg, 125, 20, 105, 105 * newsImg.height / newsImg.width);
-    })
-    newsImg.src = "./assets/newspaper.png";
+    // let newsImg = new Image();
+    // newsImg.addEventListener("load", function () {
+    //   that.ctx.drawImage(newsImg, 125, 20, 105, 105 * newsImg.height / newsImg.width);
+    // })
+    // newsImg.src = "./assets/newspaper.png";
 
-    let sanImg = new Image();
-    sanImg.addEventListener("load", function () {
-      that.ctx.drawImage(sanImg, 345, 13, 95, 95 * sanImg.height / sanImg.width);
-    })
-    sanImg.src = "./assets/sanitizer.png";
+    // let sanImg = new Image();
+    // sanImg.addEventListener("load", function () {
+    //   that.ctx.drawImage(sanImg, 345, 13, 95, 95 * sanImg.height / sanImg.width);
+    // })
+    // sanImg.src = "./assets/sanitizer.png";
+
+    that.ctx.drawImage(this.navNurseImg, 40, 13, 40, 40 * this.navNurseImg.height / this.navNurseImg.width);
+    that.ctx.drawImage(this.navScientistImg, 265, 13, 32, 32 * this.navScientistImg.height / this.navScientistImg.width);
+    that.ctx.drawImage(this.navNewspaperImg, 125, 20, 105, 105 * this.navNewspaperImg.height / this.navNewspaperImg.width);
+    that.ctx.drawImage(this.navSanitizerImg, 345, 13, 95, 95 * this.navSanitizerImg.height / this.navSanitizerImg.width);
+
+    this.addStopBoxes();
+    this.onUpdateHealth();
+    that.canvas.onclick = that.onCanvasClick;
+  }
+
+  onUpdateHealth() {
+    this.ctx.clearRect(450, 25, 100, 150);
 
     this.ctx.setTransform(1, 0, 0, 1, 0, 0);
     // this.ctx.fillStyle = "#dbd49f";
@@ -163,9 +178,6 @@ export default class Board {
     this.ctx.setTransform(1, 0, 0, 1, 0, 0);
     this.ctx.font = "20px Arial";
     this.ctx.fillText("HEALTH", 453, 105);
-
-    this.addStopBoxes();
-    that.canvas.onclick = that.onCanvasClick;
   }
 
   onCanvasClick(e) {
@@ -243,7 +255,7 @@ export default class Board {
         } else if (this.selected === 2 && this.animationToBeDrawn.filter(ele => {return (ele.square === undefined ? false : (ele.square[0] === r.x && ele.square[1] === r.y)) }).length === 0 && this.imageObjToBeDrawn.filter(ele => { return (ele.square[0] === r.x && ele.square[1] === r.y) }).length === 0) {
           if (this.healthPts > 99) {
             this.animationToBeDrawn.push({ image: this.scientistImg, shift: 0, frameWidth: 51, frameHeight: 150, totalFrames: 2, currentFrame: 0, fps: 5,
-              fpsInterval: 200, xi: r.x + 20, yi: r.y - 55, type: "animation", item: "scientist", active: true, healthTime: Date.now(), firstPass: true, square: [r.x, r.y], damage: 0 })
+              fpsInterval: 200, xi: r.x + 20, yi: r.y - 55, type: "animation", item: "scientist", active: true, healthTime: Date.now(), firstPass: true, square: [r.x, r.y], damage: 0, frameCt: 0 })
             this.healthPts -= 100;
           }
           this.ctx.clearRect(0, 0, 950, 130);
@@ -274,13 +286,9 @@ export default class Board {
       this.ctx.fillRect(10, 10, 100, 105);
       this.ctx.fillRect(120, 10, 100, 105);
       this.ctx.fillRect(230, 10, 100, 105);
-      // this.ctx.fillRect(340, 10, 100, 105);
     } else if (this.healthPts < 100) {
       this.ctx.fillStyle = "rgba(0, 0, 0, 0.5)";
-      // this.ctx.fillRect(10, 10, 100, 105);
-      // this.ctx.fillRect(120, 10, 100, 105);
       this.ctx.fillRect(230, 10, 100, 105);
-      // this.ctx.fillRect(340, 10, 100, 105);
     }
   }
 
@@ -290,6 +298,7 @@ export default class Board {
     this.then = Date.now();
     this.startTime = this.then;
     this.healthOld = Date.now();
+    this.drawNavbarTime = Date.now();
     let baddies = new Baddies(this.dimensions, this.canvasA, this.ctxA);
     this.animationToBeDrawn = baddies.getBaddies();
     this.draw();
@@ -302,10 +311,17 @@ export default class Board {
     let elapsed = now - this.then;
     let that = this;
 
+    if (1000 < (now - this.drawNavbarTime)) {
+      // this.onUpdateHealth();
+      // this.addStopBoxes();
+      this.drawNavbar();
+      this.drawNavbarTime = Date.now();
+    }
+
     if (7500 < (now - this.healthOld)) {
       this.healthPts += 25;
       this.healthOld = Date.now();
-      this.drawNavbar();
+      // this.drawNavbar();
     }
 
     if (elapsed > that.fpsInterval) {
@@ -347,28 +363,28 @@ export default class Board {
             imageObj.frameCt += 1;
           }
 
-          if (imageObj.item === "scientist" && imageObj.currentFrame === 2 && this.scientistRepeat < 20) {
+          if (imageObj.item === "scientist" && imageObj.currentFrame === 2 && imageObj.frameCt < 20) {
             imageObj.shift = 51;
             imageObj.currentFrame = 1;
-            this.scientistRepeat += 1;
+            imageObj.frameCt += 1;
           }
 
-          if (imageObj.item === "scientist" && this.scientistRepeat > 19 && this.scientistRepeat < 30) {
+          if (imageObj.item === "scientist" && imageObj.frameCt > 19 && imageObj.frameCt < 30) {
             imageObj.shift = 0;
             imageObj.currentFrame = 0;
-            this.scientistRepeat += 1;
+            imageObj.frameCt += 1;
           }
 
-          if (imageObj.item === "scientist" && this.scientistRepeat === 30) {
-            this.scientistRepeat = 0;
+          if (imageObj.item === "scientist" && imageObj.frameCt === 30) {
+            imageObj.frameCt = 0;
             imageObj.shift = 0;
             imageObj.currentFrame = 0;
           }
 
-          if (imageObj.item === "scientist" && (10000 < now - imageObj.healthTime)) {
+          if (imageObj.item === "scientist" && (11000 < now - imageObj.healthTime)) {
             imageObj.healthTime = now;
             this.healthPts += 50;
-            this.drawNavbar();
+            // this.drawNavbar();
             imageObj.firstPass = false;
           }
           

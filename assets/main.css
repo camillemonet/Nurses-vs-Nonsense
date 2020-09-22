@@ -129,6 +129,7 @@ span {
   position: fixed;
   bottom: 0px;
   font-family: 'Righteous', cursive;
+  z-index: 10;
 }
 
 #footer a {

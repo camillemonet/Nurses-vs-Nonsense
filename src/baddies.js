@@ -318,9 +318,8 @@ export default class Baddies {
   levelSeven() {
     let outputArr = [];
 
-    let bobPoint = 5950;
-    let karenPoint = 5350;
-    let mikePoint = 7000;
+    let bobPoint = 5550;
+    let karenPoint = 5250;
 
     outputArr.push({
       image: this.bobImg, shift: 0, frameWidth: 85, frameHeight: 149, totalFrames: 7, currentFrame: 0,
@@ -413,7 +412,7 @@ export default class Baddies {
   levelInfinite() {
     let outArray = [];
 
-    for (let i = 15000; i < 100000; i += 50) {
+    for (let i = 6000; i < 100000; i += 50) {
 
       outputArr.push({
         image: this.bobImg, shift: 0, frameWidth: 85, frameHeight: 149, totalFrames: 7, currentFrame: 0,

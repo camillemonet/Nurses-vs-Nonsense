@@ -66,4 +66,28 @@ export default class Pics {
     return this.plussign;
   }
 
+  navbarNurse() {
+    this.navNurse = new Image();
+    this.navNurse.src = "./assets/nurse_sprite.png";
+    return this.navNurse;
+  }
+
+  navbarScientist() {
+    this.navScientist = new Image();
+    this.navScientist.src = "./assets/scientist_sprite.png";
+    return this.navScientist;
+  }
+
+  navbarNewspaper() {
+    this.navNewspaper = new Image();
+    this.navNewspaper.src = "./assets/newspaper.png";
+    return this.navNewspaper;
+  }
+
+  navbarSanitizer() {
+    this.navSanitizer = new Image();
+    this.navSanitizer.src = "./assets/sanitizer.png";
+    return this.navSanitizer;
+  }
+
 }
