@@ -4,7 +4,7 @@ export default class Baddies {
 
   constructor(dimensions, canvas, ctx) {
     this.pics = new Pics(dimensions, canvas, ctx);
-    this.rows = [80, 185, 290, 395, 500];
+    this.rows = [133, 238, 343, 448, 553];
 
     this.karenImg = this.pics.karenImage();
     this.bobImg = this.pics.bobImage();

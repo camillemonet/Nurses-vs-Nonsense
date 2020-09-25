@@ -50,7 +50,7 @@ export default class Board {
     let that = this; 
 
     let xi = 238;
-    let yi = 137;
+    let yi = 137+51;
 
     for(let j = 0; j < 5; j++) {
       for(let jj = 0; jj < 9; jj++) {
@@ -211,7 +211,7 @@ export default class Board {
     i = 0;
 
     let xi = 238;
-    let yi = 137;
+    let yi = 137+51;
 
     for (let j = 0; j < 5; j++) {
       for (let jj = 0; jj < 9; jj++) {
