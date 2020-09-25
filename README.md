@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/camillemonet/images/blob/master/js_title.png" />
+  <img src="https://github.com/camillemonet/images/blob/master/js_home.png" />
 </p>
 
 Nurses vs Nonsense is a game which encourages players to stop individuals from shopping in stores without masks.
@@ -14,6 +14,8 @@ By placing strategic obstacles such as:
  
  ### Link to live site:
  https://camillemonet.github.io/Nurses-vs-Nonsense/
+ 
+ ![Game Gif](https://github.com/camillemonet/images/blob/master/js_gif.gif)
  
  ### How it Works
  
