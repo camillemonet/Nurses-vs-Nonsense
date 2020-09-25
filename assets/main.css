@@ -5,7 +5,7 @@ html {
 
 body {
   width: 100%;
-  height: 800px;
+  height: 850px;
   margin: 0px;
   background-color: black;
   display: flex;
@@ -22,7 +22,7 @@ body {
 }
 
 .main-div-top {
-  width: 700px;
+  width: 715px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -76,17 +76,11 @@ i {
   width: 900px;
 }
 
-#game-bar {
-  height: 125px;
-  width: 100%;
-  background-color: rgb(24, 24, 24);
-}
-
 #game-background {
   background-color: purple;
-  background-image: url("../assets/background_wbar1.png");
+  background-image: url("../assets/background_wbar2.png");
   position: relative;
-  height: 665px;
+  height: 718px;
   width: 1150px;
 }
 

@@ -22,9 +22,9 @@ export default class StoreDefense {
     this.setVolume = this.setVolume.bind(this);
     this.soundIcon.onclick = this.setVolume;
 
-    canvas.height = 665;
+    canvas.height = 718;
     canvas.width = 1150;
-    canvas2.height = 665;
+    canvas2.height = 718;
     canvas2.width = 1150;
 
     // Set Context and Restart Game
